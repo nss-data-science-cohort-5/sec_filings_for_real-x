@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sec_filings_for_real-x"
+version = "0.1.0"
+description = ""
+authors = ["Bryan Finlayson <bdfinlayson@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+pytest = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
