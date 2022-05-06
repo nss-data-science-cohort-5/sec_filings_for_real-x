@@ -10,6 +10,7 @@ black = "^22.3.0"
 flake8 = "^4.0.1"
 pytest = "^7.1.2"
 beautifulsoup4 = "^4.11.1"
+spacy = "^3.3.0"
 
 [tool.poetry.dev-dependencies]
 
