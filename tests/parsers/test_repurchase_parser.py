@@ -10,7 +10,7 @@ class TestRepurchaseParser:
         parser = RepurchaseParser()
 
         # act
-        result = parser.read(text)
+        result = parser.find_best_matches(text)
 
         # assert
         assert result == "N/A"
@@ -41,7 +41,7 @@ class TestRepurchaseParser:
         parser = RepurchaseParser()
 
         # act
-        result = parser.read(text)
+        result = parser.find_best_matches(text)
 
         # assert
         assert result == expected

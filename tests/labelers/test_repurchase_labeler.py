@@ -21,7 +21,7 @@ class TestRepurchaseLabeler:
         labeler = RepurchaseLabeler()
 
         # act
-        result = labeler.apply(text)
+        result = labeler.get_named_entities(text)
 
         # assert
         assert expected == result

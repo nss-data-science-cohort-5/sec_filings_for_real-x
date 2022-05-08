@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 class HtmlReader:
     @classmethod
-    def read(cls, html: str) -> str:
+    def read_text(cls, html: str) -> str:
         soup = BeautifulSoup(html)
         # using find_all(text=True) instead of get_text(strip=False)
         # to avoid incorrectly joining words together
