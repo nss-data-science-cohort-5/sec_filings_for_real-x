@@ -11,7 +11,7 @@ class RepurchaseParser(ParserProtocol):
     pattern = r".[^.]*?repurchased.*"
     keyword = "repurchased"
     window_behind = 35
-    window_ahead = 100
+    window_ahead = 130
 
     def find_best_matches(self, text: str) -> [str]:
         # get indexes of all keyword matches
@@ -31,4 +31,4 @@ class RepurchaseParser(ParserProtocol):
                 end = match.span()[1]
                 best_matches.append(substring[start:end])
 
-        return best_matches
+        return list(set(best_matches))

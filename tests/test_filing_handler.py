@@ -12,13 +12,13 @@ class TestFilingHandler:
                 {
                     "repurchased": [
                         {
-                            "amount": "$25.1 million",
-                            "date": "l year ended November 30, 2021",
+                            "amount": "approximately $25.1 million",
+                            "date": "November 30, 2021",
                             "number": "138,455",
                         },
                         {
-                            "amount": "approximately $25.1 million",
-                            "date": "November 30, 2021",
+                            "amount": "$25.1 million",
+                            "date": "l year ended November 30, 2021",
                             "number": "138,455",
                         },
                     ]
@@ -44,8 +44,8 @@ class TestFilingHandler:
                         },
                         {
                             "amount": "$100.0 million",
-                            "date": "fiscal 2022",
-                            "number": "2,292,846",
+                            "date": "fiscal 2021",
+                            "number": "1,177,704",
                         },
                         {
                             "amount": "$32.9 million",
@@ -54,8 +54,8 @@ class TestFilingHandler:
                         },
                         {
                             "amount": "$100.0 million",
-                            "date": "fiscal 2021",
-                            "number": "1,177,704",
+                            "date": "fiscal 2022",
+                            "number": "2,292,846",
                         },
                     ]
                 },
@@ -66,14 +66,14 @@ class TestFilingHandler:
                 {
                     "repurchased": [
                         {
-                            "amount": "$10.0 million",
-                            "date": "the year ended December 31, 2020",
-                            "number": "800,235",
+                            "amount": "$3.9 million",
+                            "date": "December 31, 2019",
+                            "number": "237,647",
                         },
                         {
-                            "amount": "$3.9 million",
-                            "date": "the year ended December 31, 2019",
-                            "number": "237,647",
+                            "amount": "$10.0 million",
+                            "date": "December 31, 2020",
+                            "number": "800,235",
                         },
                     ]
                 },

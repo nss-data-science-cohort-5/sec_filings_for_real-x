@@ -31,19 +31,29 @@ class RepurchaseLabeler(LabelerProtocol):
 
         # remove any duplicates
         labels_cleaned = []
-        [labels_cleaned.append(dict(t)) for t in {tuple(sorted(d.items())) for d in labels}]
+        [
+            labels_cleaned.append(dict(t))
+            for t in {tuple(sorted(d.items())) for d in labels}
+        ]
+        # sort results so that we have some consistent ordering
+        labels_cleaned.sort(
+            key=lambda obj: (obj.get("date"), obj.get("amount"), obj.get("number"))
+        )
         return labels_cleaned
 
     def get_date(self, obj) -> str:
         # must have at least a four digit year
-        if obj.text and re.search(r'\d{4}', obj.text):
+        if obj.text and re.search(r"\d{4}", obj.text):
             return obj.text
 
     def get_number(self, obj) -> str:
-        # must have at least one digit
-        if obj.text and bool(re.search(r'\d*,\d*', obj.text)):
+        # must have comma separated digits
+        if obj.text and bool(re.search(r"\d*,\d*", obj.text)):
             return obj.text
 
     def get_amount(self, obj) -> str:
-        if bool(re.search(r'\d*', obj.text)) and bool(re.search(r"(\$|thousand|million|billion)", obj.text)):
+        # must have amount qualifier
+        if bool(re.search(r"\d*", obj.text)) and bool(
+            re.search(r"(\$|thousand|million|billion)", obj.text)
+        ):
             return obj.text
