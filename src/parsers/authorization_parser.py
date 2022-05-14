@@ -3,10 +3,10 @@ import re
 from src.parsers.parser_protocol import ParserProtocol
 
 
-class RepurchaseParser(ParserProtocol):
-    pattern = r".[^.]*?repurchased.*"
-    keyword = "repurchased"
-    window_behind = 35
+class AuthorizationParser(ParserProtocol):
+    pattern = r".[^.]*?authoriz.+?(?=\.\s)"
+    keyword = r"authoriz"
+    window_behind = 55
     window_ahead = 130
 
     def find_best_matches(self, text: str) -> [str]:
