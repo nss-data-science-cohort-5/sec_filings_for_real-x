@@ -1,6 +1,6 @@
 import pytest
 
-from src.labelers.authorization_labeler import AuthorizationLabeler
+from api.src.labelers.authorization_labeler import AuthorizationLabeler
 
 
 class TestAuthorizationLabeler:

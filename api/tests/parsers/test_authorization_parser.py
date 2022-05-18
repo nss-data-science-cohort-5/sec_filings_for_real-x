@@ -1,6 +1,6 @@
 import pytest
 
-from src.parsers.authorization_parser import AuthorizationParser
+from api.src.parsers.authorization_parser import AuthorizationParser
 
 
 class TestAuthorizationParser:

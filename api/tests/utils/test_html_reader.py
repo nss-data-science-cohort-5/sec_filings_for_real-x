@@ -1,6 +1,6 @@
 import pytest
 
-from src.utils.html_reader import HtmlReader
+from api.src.utils.html_reader import HtmlReader
 
 
 class TestHtmlReader:
@@ -9,7 +9,7 @@ class TestHtmlReader:
         [
             (
                 "./stubs/report_excerpts/fnhc-sample.html",
-                "In December 2018, the Company’s Board of Directors authorized an additional share repurchase program under which the Company may repurchase up to $10.0 million of its outstanding shares of common stock through December 31, 2019. During the year ended December 31, 2019, the Company repurchased 237,647 shares of its common stock at a total cost of $3.9 million, which is an average price per share of $16.27. The unused portion of this authorization expired on December 31, 2019.",
+                "In December 2018, the Company’s Board of Directors authorized an additional share repurchase program under which the Company may repurchase up to $10.0 million of its outstanding shares of common stock through December 31, 2019. During the year ended December 31, 2019, the Company repurchased 237,647 shares of its common stock at a total cost of $3.9 million, which is an average price per share of $16.27 The unused portion of this authorization expired on December 31, 2019.",
             ),
             (
                 "./stubs/report_excerpts/earn-sample.html",

@@ -1,6 +1,6 @@
 import re
 
-from src.parsers.parser_protocol import ParserProtocol
+from api.src.parsers.parser_protocol import ParserProtocol
 
 
 class RepurchaseParser(ParserProtocol):

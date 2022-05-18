@@ -2,7 +2,7 @@ import re
 
 import spacy
 
-from src.labelers.labeler_protocol import LabelerProtocol
+from api.src.labelers.labeler_protocol import LabelerProtocol
 
 
 class AuthorizationLabeler(LabelerProtocol):

@@ -1,6 +1,6 @@
 import pytest
 
-from src.filing_handler import FilingHandler
+from api.src.filing_handler import FilingHandler
 
 
 class TestFilingHandler:

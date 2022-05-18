@@ -1,6 +1,6 @@
 import pytest
 
-from src.parsers.repurchase_parser import RepurchaseParser
+from api.src.parsers.repurchase_parser import RepurchaseParser
 
 
 class TestRepurchaseParser:

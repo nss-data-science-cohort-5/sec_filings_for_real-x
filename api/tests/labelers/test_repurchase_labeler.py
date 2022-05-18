@@ -1,5 +1,5 @@
 import pytest
-from src.labelers.repurchase_labeler import RepurchaseLabeler
+from api.src.labelers.repurchase_labeler import RepurchaseLabeler
 
 
 class TestRepurchaseLabeler:

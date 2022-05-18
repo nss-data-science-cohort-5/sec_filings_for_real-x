@@ -1,7 +1,7 @@
-from src.labelers.repurchase_labeler import RepurchaseLabeler
-from src.parsers.repurchase_parser import RepurchaseParser
-from src.pipelines.pipeline_protocol import PipelineProtocol
-from src.utils.html_reader import HtmlReader
+from api.src.labelers.repurchase_labeler import RepurchaseLabeler
+from api.src.parsers.repurchase_parser import RepurchaseParser
+from api.src.pipelines.pipeline_protocol import PipelineProtocol
+from api.src.utils.html_reader import HtmlReader
 
 
 class RepurchasePipeline(PipelineProtocol):

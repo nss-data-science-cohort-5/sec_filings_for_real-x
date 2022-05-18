@@ -1,5 +1,5 @@
-from src.pipelines.authorization_pipeline import AuthorizationPipeline
-from src.pipelines.repurchase_pipeline import RepurchasePipeline
+from api.src.pipelines.authorization_pipeline import AuthorizationPipeline
+from api.src.pipelines.repurchase_pipeline import RepurchasePipeline
 
 
 class FilingHandler:
