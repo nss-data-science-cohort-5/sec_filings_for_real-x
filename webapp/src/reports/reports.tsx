@@ -3,7 +3,7 @@ import Search from "../search/search";
 import ReportCard, {ReportItem} from "./reportCard/reportCard";
 import axios from "axios";
 import AlertDismissible from "../alert/alert";
-import {Col, Row} from "react-bootstrap";
+import {Col, Row, Spinner} from "react-bootstrap";
 
 interface ReportListDto {
   reports: Array<ReportItem>;
@@ -41,6 +41,11 @@ const Reports = () => {
         {(searchedTerm && !isLoading && !isErrored && reportItems.length == 0) && <AlertDismissible variant="warning" text1="No report items found" text2="If you think this is wrong, please try again" />}
         <Search searchRequestCallbackFn={getReportList} />
         {(searchedTerm && reportItems.length > 0) && <h5>Results for: {searchedTerm}</h5>}
+        {isLoading && (
+          <div className="d-flex justify-content-center mt-3 pt-5">
+            <Spinner animation="border" />
+          </div>
+        )}
         {reportItems.length > 0 && reportItems.map((item: ReportItem) => <ReportCard reportItem={item} /> )}
       </Col>
     </Row>

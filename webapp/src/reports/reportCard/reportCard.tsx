@@ -1,4 +1,4 @@
-import {Button, Col, Row, Table} from "react-bootstrap";
+import {Button, Col, Row, Spinner, Table} from "react-bootstrap";
 import {useState} from "react";
 import axios from "axios";
 import AlertDismissible from "../../alert/alert";
@@ -122,9 +122,18 @@ const ReportCard = (params: ReportCardParams) => {
           </div>
         </Col>
       </Row>
-      {retryScan && <AlertDismissible variant="info" text1="No data found" text2="Neither authorized nor repurchased data were found inside this report." />}
-      {(anyAuthorizedInfo() && !hideStats && !retryScan) && statsTable("Authorized Stock Repurchase Program", reportInfo.authorized)}
-      {(anyRepurchasedInfo() && !hideStats && !retryScan) && statsTable("Stock Repurchases", reportInfo.repurchased)}
+      <Row>
+        <Col>
+          {isLoading && (
+            <div className="d-flex justify-content-center mt-4">
+              <Spinner animation="border" />
+            </div>
+          )}
+          {retryScan && <AlertDismissible variant="info" text1="No data found" text2="Neither authorized nor repurchased data were found inside this report." />}
+          {(anyAuthorizedInfo() && !hideStats && !retryScan) && statsTable("Authorized Stock Repurchase Program", reportInfo.authorized)}
+          {(anyRepurchasedInfo() && !hideStats && !retryScan) && statsTable("Stock Repurchases", reportInfo.repurchased)}
+        </Col>
+      </Row>
     </div>
   )
 }

@@ -55,6 +55,7 @@ class SecScraper:
 		df = pd.read_html(html_table, flavor="html5lib")[0]
 		df["form_link"] = links
 		df["Form description"] = df["Form description"].apply(lambda x: x.split("Open document")[0])
+		df["Reporting date"] = df["Reporting date"].apply(lambda x: x.split("View all")[0])
 		df.columns = [x.lower().replace(" ", "_") for x in df.columns]
 
 		# convert the dataframe to json and close the driver
