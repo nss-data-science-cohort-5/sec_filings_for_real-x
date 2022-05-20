@@ -7,6 +7,7 @@ from api.src.scraper.models.report_item import ReportItem
 from selenium import webdriver
 import pandas as pd
 import json
+import time
 
 
 class SecScraper:
@@ -67,6 +68,7 @@ class SecScraper:
 	def get_report(self, report_url: str) -> str:
 		self.driver.get(report_url)
 		self.driver.implicitly_wait(30)
+		time.sleep(3)
 		report = self.driver.page_source
 		self.driver.quit()
 		return report
