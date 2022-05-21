@@ -1,6 +1,7 @@
 # SEC Filings Automated Data Extraction
 
 ![image](https://user-images.githubusercontent.com/7499749/169433670-1cc969c5-a682-4942-aea7-c4801fa46276.png)
+![image](https://user-images.githubusercontent.com/7499749/169660619-5ab045db-8435-484f-bf5d-99168dd40610.png)
 
 
 In this project, your objective is to produce a method of automatically extracting information from a company's 10-K filing. The 10-K is a required annual report that gives a comprehensive overview of the company's business and financial condition. Your specific goal is to extract information a company's share repurchases. A share repurchase is a transaction where a company buys back its own shares from the marketplace.
